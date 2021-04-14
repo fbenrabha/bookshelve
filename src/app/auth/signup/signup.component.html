@@ -1,25 +1,47 @@
-<div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <h2>Créer un compte</h2>
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <br>
+        <h4 >Créer un compte</h4> 
+      </div>
+      
+  
+      <!-- Login Form -->
       <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
         <div class="form-group">
-          <label for="email">Adresse mail</label>
+          
           <input type="text"
                  id="email"
                  class="form-control"
+                 placeholder="Email"
                  formControlName="email">
         </div>
+
         <div class="form-group">
-          <label for="password">Mot de passe</label>
-          <input type="password"
+        <input type="password"
                  id="password"
-                 class="form-control"
+                 class="fadeIn third"
+                 placeholder="Password"
                  formControlName="password">
-        </div>
+         </div>
+
         <button class="btn btn-primary"
-                type="submit"
-                [disabled]="signupForm.invalid">Créer mon compte</button>
+        type="submit"
+        [disabled]="signupForm.invalid">Créer mon compte</button>
+        
       </form>
-      <p class="text-danger">{{ errorMessage }}</p>
+      <br>
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <p class="text-danger">Le mot de passe doit contenir au minimum 6 caractère</p>
+
+        <p class="text-danger">{{ errorMessage }}</p>
+            </div>
+  
     </div>
   </div>
