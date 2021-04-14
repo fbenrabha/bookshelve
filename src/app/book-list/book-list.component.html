@@ -1,0 +1,28 @@
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Vos livres</h2>
+    </div>
+  </div>
+  <div class="row" class="container-fluid">
+    
+      <div class="list-group " >
+        <button
+          class="list-group-item"
+          *ngFor="let book of books; let i = index"
+          (click)="onViewBook(i)">
+          <div class="col-xs-12 pull-left">
+            <h3 >
+              {{ book.title }}
+          
+            </h3>
+          </div>
+           
+        
+          <p class="list-group-item-text">{{ book.author }}</p>
+          <button class="btn btn-danger pull-right" (click)="onDeleteBook(book)">
+            Supprimer
+          </button>
+        </button>
+      </div>
+      <button class="btn btn-primary" (click)="onNewBook()">Nouveau livre</button>
+  </div>
