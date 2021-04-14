@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.3",
@@ -21,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~11.2.3",
     "@angular/router": "~11.2.3",
     "bootstrap": "^4.6.0",
+    "express": "^4.17.1",
     "firebase": "^8.3.1",
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.6",
